@@ -20,16 +20,12 @@ ActiveRecord::Schema.define(version: 20170524171249) do
     t.text     "description"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.integer  "buyer_id_id"
-    t.integer  "seller_id_id"
     t.integer  "buyer_id"
     t.integer  "seller_id"
   end
 
   add_index "auctions", ["buyer_id"], name: "index_auctions_on_buyer_id"
-  add_index "auctions", ["buyer_id_id"], name: "index_auctions_on_buyer_id_id"
   add_index "auctions", ["seller_id"], name: "index_auctions_on_seller_id"
-  add_index "auctions", ["seller_id_id"], name: "index_auctions_on_seller_id_id"
 
   create_table "bids", force: :cascade do |t|
     t.integer  "bidder_id"
