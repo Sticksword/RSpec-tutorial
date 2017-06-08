@@ -17,8 +17,12 @@ RSpec.describe User, :type => :model do
     end
 
     it 'match_array' do
+      binding.pry
+      4 + 5
+      test_str = $stdin.read
       u1
       u2
+      test_str_2 = $stdin.read
       is_expected.to match_array([u1, u2])
     end
   end
